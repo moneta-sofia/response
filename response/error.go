@@ -17,19 +17,19 @@ func error(msg string, code int) Response {
 	}
 }
 
-func InternalServerError(msg string, data interface{}) Response {
+func InternalServerError(msg string) Response {
 	return error(msg, http.StatusInternalServerError)
 }
-func NotFound(msg string, data interface{}) Response {
+func NotFound(msg string) Response {
 	return error(msg, http.StatusNotFound)
 }
-func Unauthorized(msg string, data interface{}) Response {
+func Unauthorized(msg string) Response {
 	return error(msg, http.StatusUnauthorized)
 }
-func Forbidden(msg string, data interface{}) Response {
+func Forbidden(msg string) Response {
 	return error(msg, http.StatusForbidden)
 }
-func BadRequest(msg string, data interface{}) Response {
+func BadRequest(msg string) Response {
 	return error(msg, http.StatusBadRequest)
 }
 
